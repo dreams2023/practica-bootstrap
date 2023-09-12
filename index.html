@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title><!-- tenemos dos tipos de posicionamiento 1bloque 2 en linea-->
+    <style>
+         /**{
+            padding:0px;
+            margin: 0px;
+            box-sizing:border-box;
+        }
+
+        .contenedor{
+            width: 800px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 5px;
+        }
+       
+        .contenedor div{
+            display: inline-block;lo hace flexible ma adecuado, si yo lo dejo en block  va a ordenarse uno arriba del otro 
+            background-color: blueviolet;
+            border:2px solid;
+            height:200px;
+            width:200px;
+        }*/
+
+        * {
+            padding:0px;
+            margin: 0px;
+            box-sizing:border-box;
+        }
+
+        .contenedor {
+            display: flex;
+           
+           /* flex-direction: column-reverse;
+            flex-wrap: nowrap;*/
+            gap: 15px;
+            border: 1px solid blue;
+            justify-content:space-around;/*jutifica el contenido*/
+            align-items: center;/*lo centra*/
+            background-color: black;
+        }
+
+        .contenedor div {
+            width:200px;
+            height: 200px;
+            max-width: 200px;
+            max-height: 200px;
+            background-color: blueviolet;
+            border: 1px solid ;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .contenedor div:nth-child(2){
+            background-color: brown;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+
+     </style>
+</head>
+<body>
+    <div class="contenedor"> <!--practicamos flexbox,-->
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+    </div>
+</body>
+</html>
